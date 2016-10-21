@@ -1,0 +1,368 @@
+\documentclass[letterpaper]{article}
+
+\usepackage{textcomp}
+
+\usepackage[firstinits=true, isbn=false, url=false,  doi=false, style=ieee, defernumbers=true, sorting=ydnt]{biblatex}
+\renewbibmacro*{bbx:savehash}{}
+\addbibresource{myref.bib}    
+\nocite{*}
+
+%\usepackage[style=numeric,sorting=ydnt]{biblatex}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{tabularx}
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+\usepackage{etaremune}
+
+\newcommand{\ypl}[1]{\textcolor{red}{[YPL: #1]}}
+
+% Set your name here
+\def\name{Yoke Peng Leong}
+ 
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {robotics,control,estimation},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={7.5in, 9.5in},
+  left=0.5in,
+  top=0.75in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+% \sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+\usepackage{titlesec} % Allows creating custom \section's\usepackage{url}
+\titleformat{\section}{\rmfamily\mdseries\Large}{}{0em}{}[\vspace{-8px} \hrulefill] % Section formatting
+
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+%\renewenvironment{itemize}{
+%  \begin{list}{}{
+%    \setlength{\leftmargin}{1.5em}
+%  }
+%}{
+%  \end{list}
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+% Place name at left
+{\huge \name}
+
+\hrulefill
+\vspace{10px}
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+
+\begin{minipage}{0.45\linewidth}
+  %\href{http://www.unc.edu/}{California Institute of Technology} \\
+  California Institute of Technology\\
+  1200 E. California Blvd.\\
+  MC 305-16 \\ 
+  Pasadena, CA 91125
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Phone: &             (847) 644-2416     \\
+    %Fax: &  (919) 962-5678 \\
+    Email: & \href{mailto:ypleong@caltech.edu}{ypleong@caltech.edu} \\
+    Website: & \href{http://www.cds.caltech.edu/~yleong/}{\tt http://www.cds.caltech.edu/$\sim$yleong/} 
+  \end{tabular}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Education}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l r}
+2012 - Present &\textbf{California Institute of Technology} & Pasadena, CA\\
+ & Ph.D. in Control and Dynamical Systems & \\ 
+ & \textit{Adviser: Dr. John Doyle and Dr. Joel Burdick} & \\ \\
+
+2011 - 2012 &\textbf{Northwestern University} & Evanston, IL\\
+ & M.S. in Mechanical Engineering (Specialization: Robotics \& Control) & \\
+ & \textit{Thesis: Surface Feature Detection Based on Proprioception of a Robotic}&\\
+& \textit{Finger during Haptic Exploration} & \\ \\
+
+2008 - 2012 &\textbf{Northwestern University}& Evanston, IL\\
+ & B.S. in Mechanical Engineering (Concentration: Mechatronics) & \\
+&Minor: Economics & \\
+& \textit{Summa cum Laude} &
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Honors and Awards}
+
+\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
+\item Caltech Computing and Mathematical Sciences (CMS) Fellowship, 2012-2013
+\item Tau Beta Pi Engineering Honors Society Fellow, 2012-2013
+\item Malaysian Public Service Department Scholarships for Undergraduate Education Abroad at USA, 2007-2012
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Current Research Projects}
+
+
+\begin{tabularx}{\textwidth}{@{\extracolsep{\fill}} X}
+\textbf{Nonlinear Optimal Control}\\
+ \textit{Adviser: Joel Burdick, John Doyle}  \\
+{- Synthesized control Lyapunov functions of stochastic nonlinear systems
+using Sum of Squares method} \\  
+{--> Constructed a novel general approach to compute suboptimal controller
+with guarantees on performance and approximation errors} \\  
+{- Solved high dimensional (> 6D) linear Hamilton Jacobi Bellman equation, a
+PDE, using tensor decomposition and alternating least squares in MATLAB} \\  
+{--> Increased the speed (hours to minutes) and stability of the alternating
+least squares algorithm} \\  \\
+
+\textbf{Control Engineering in Neuroscience}\\
+ \textit{Adviser: Joel Burdick, John Doyle}  \\
+{- Designed and conducted human subject experiments to study human
+sensorimotor control feedback based on robust control theory} \\  
+{- Processed and analyzed motion capture data using Bash and MATLAB to
+confirm theoretical predictions} \\  
+{--> Discovered important trends (predicted by theoretical analysis and
+confirmed with experiments) that were neglected in previous studies} 
+
+\end{tabularx}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Research Experience}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l r}
+May 2014 - July 2014 &\textbf{IMDEA Software Institute} & Madrid Institute for Advanced Studies\\
+ & \textit{Research Intern (Adviser: Dr. Pavithra Prabhakar)} & \\
+ & \multicolumn{2}{p{0.8\textwidth}}{- Synthesized optimal control strategy for hybrid dynamical systems using an abstraction-refinement procedure that preserves the transition cost} \\ 
+   & \multicolumn{2}{p{0.8\textwidth}}{--> Developed a tool in Python for synthesizing the controller} \\ \\
+	
+July 2012 - Aug 2012 &\textbf{Underwater Robotics Research Group} & Universiti Sains Malaysia\\
+ & \textit{Research Assistant (Adviser: Dr. Mohd Rizal Arshad)} & \\
+ & \multicolumn{2}{p{0.8\textwidth}}{- Modeled underwater acoustics wave propagation for jellyfish detection} \\ 
+& \multicolumn{2}{p{0.8\textwidth}}{- Developed a model to estimate backscattering wave strength of a jellyfish  }  \\ \\
+
+Dec 2010 - Jun 2012 &\textbf{Murphey Lab} & Northwestern University\\
+ & \textit{Undergraduate Researcher (Adviser: Dr. Todd Murphey)} & \\
+ & \multicolumn{2}{p{0.8\textwidth}}{- Created a 3D dynamic model of 3-joint finger tapping and sliding in Mathematica} \\ 
+& \multicolumn{2}{p{0.8\textwidth}}{- Extended the hybrid system switching time optimization to systems with
+mixed dynamics and impulses} \\
+& \multicolumn{2}{p{0.8\textwidth}}{--> Constructed a new smoothing algorithm to detect and localize surface
+feature from noisy proprioceptive measurements of a robotic finger
+using the impulsive hybrid system optimization technique}
+\end{tabular*}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Publications}
+
+\printbibliography[heading=subbibliography,title={Journal Articles},type=article]
+\printbibliography[heading=subbibliography,title={Refereed Conference Papers},type=inproceedings]
+\printbibliography[heading=subbibliography,title={Posters/Abstracts},type=misc]
+\printbibliography[heading=subbibliography,title={Master's Thesis},type=thesis]
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Teaching Experience}
+
+\subsection*{Teaching Assistant}
+\begin{itemize}
+\item ME 115 Introduction to Kinematic and Robotics (Spring 2015) 
+\item CNS 186 Vision: From Computational Theory to Neuronal Mechanisms (Winter 2015)
+\item ACM 104 Linear Algebra (Fall 2014)
+\end{itemize}
+
+\subsection*{Guest Lecturer}
+%\subsubsection*{California Institute of Technology}
+\begin{itemize}
+\item CDS 240 Nonlinear Dynamical Systems (April 22, 2016)
+\item CDS 212 Introduction to Modern Control (May 14, 2015)
+\end{itemize}
+
+
+\subsection*{Students Advised}
+\begin{itemize}
+\item Elis Stefansson (KTH Institute of Technology, Caltech Summer Undergraduate Research Fellowship, 2015)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{Talks/Seminars/Lectures}
+%
+%\vspace{-15px}
+%\hrulefill
+%\vspace{10px}
+%
+%\begin{itemize}
+%\item Talk on ``The Role of Vision in Sensorimotor Control of Human Stick Balancing'' at University of California, Los Angeles (October 26, 2015)
+%\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Work Experience}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l r}
+May 2016 - Sept 2016 &\textbf{Datascope Analytics} & Chicago, IL\\
+ & \textit{Data Science Intern} & \\
+ & \multicolumn{2}{p{0.8\textwidth}}{- Developed a survey analysis website application that can automatically generate useful data relationships using Django and AngularJS} \\ 
+ & \multicolumn{2}{p{0.8\textwidth}}{- Facilitated group discussions with the executive team of a client in a brainstorming workshop} \\ 
+ & \multicolumn{2}{p{0.8\textwidth}}{- Created a website application that displays the train rumbling by the office using the Chicago Transit Authority's Train Tracer API} \\ 
+ & \multicolumn{2}{p{0.8\textwidth}}{- Released a Python package that simplifies analysis of time series data at irregular time intervals} \\ 
+  & \multicolumn{2}{p{0.8\textwidth}}{- Wrote a blog post that discusses the rise of the Internet of Things} \\ \\	
+	
+Sept 2010 - Jun 2012 &\textbf{Northwestern University Athletic Department} & Evanston, IL\\
+ & \textit{N'CAT Tutor} & \\
+ & \multicolumn{2}{p{0.8\textwidth}}{- Assisted student athletes in improving their academics performances in various freshman engineering classes (e.g. MATLAB, Linear Algebra, Physics) and Mechanical Engineering classes (e.g. Fluid Mechanics, Thermodynamics) via weekly one-to-one tutoring sessions} \\ 
+& \multicolumn{2}{p{0.8\textwidth}}{- Motivated student athletes to do well in both sports and academics by giving advice on time management and stress management}  \\ \\
+
+Feb 2009 - Jun 2012 &\textbf{Northwestern University Information Technology} & Evanston, IL\\
+ & \textit{Technology Lab Consultant of Academic \& Research Technology (A\&RT)} & \\
+ & \multicolumn{2}{p{0.8\textwidth}}{- Aided users with A\&RT-supported applications and utilities including Internet based applications, word processing, spreadsheet generation and manipulation, document format conversion, and information recovery} \\ 
+& \multicolumn{2}{p{0.8\textwidth}}{- Developed a student job applications website which involves database management, browser scripting, and server scripting} \\ \\
+
+Jun 2011 - Sept 2011 &\textbf{Murphey Lab} & Evanston, IL\\
+ & \textit{Undergraduate Researcher} & \\
+ & \multicolumn{2}{p{0.8\textwidth}}{(Experience summarized above)} \\ \\
+ 
+\end{tabular*}
+
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l r}
+
+Jun 2010 - Sept 2010 &\textbf{Ethos \& Company} & Malaysia\\
+ & \textit{Strategy \& Management Consulting Intern} & \\
+ & \multicolumn{2}{p{0.8\textwidth}}{- Collaborated with colleagues on two projects: } \\ 
+& \multicolumn{2}{p{0.8\textwidth}}{\quad (a) Developed a framework to capture key synergies within the national automotive industry } \\
+& \multicolumn{2}{p{0.8\textwidth}}{\quad (b) Assisted a global agribusiness corporation to achieve 5-year growth and profitability target} \\
+& \multicolumn{2}{p{0.8\textwidth}}{- Conducted company/industry research and performed data analysis using Excel to discover trends and test hypotheses} \\
+& \multicolumn{2}{p{0.8\textwidth}}{- Developed and conducted presentations for both the client and project team} 
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Leadership Experience}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l}
+Jun 2014 - May 2016 &\textbf{Caltech Graduate Student Council}\\
+& \textit{CDS Option Representatives} \\
+& \textit{Research Communication Chair (2015-2016)} \\
+ & \multicolumn{1}{p{0.8\textwidth}}{- Advocated for graduate students in CDS option (major) and international graduate students } \\
+ &\multicolumn{1}{p{0.8\textwidth}}{- Organized the 2016 GSC Graduate Student Poster Session} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Organized two lunches for ``Take an alumni to lunch'' series } \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Coordinated off campus concert trips for 20 - 30 graduate students per trip } \\ \\
+\end{tabular*}
+
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l}
+Summer 2014, 2015 &\textbf{Caltech Teaching Conference}\\ 
+& \textit{Committee Member} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Organized and facilitated a session that discusses teaching and mentoring (2015)  } \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Facilitated a session on creating an academic career portfolio (2014)  } \\ \\
+
+Feb 2011 - Feb 2012 &\textbf{Tau Beta Pi Engineering Honors Society, IL-Gamma Chapter}\\
+& \textit{Recording Secretary} \\
+ & \multicolumn{1}{p{0.8\textwidth}}{- Reformed project management and record-keeping of the group using Google products for more efficient communication and exec board transition} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Organized various community service activities} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Created a graduate school mentoring program for members interested in pursuing a graduate degree} \\ \\
+
+Sept 2009 - Apr 2011 &\textbf{Engineers for a Sustainable World}\\
+& \textit{Webmaster \& Project Team Member} \\
+ & \multicolumn{1}{p{0.8\textwidth}}{- Designed a lever mechanism which assists technicians in priming a ram pump using NX for a hydraulic ram pump installation project in Philippines} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Redesigned layout of ESW's official website (\href{http://www.eswnu.org}{http://www.eswnu.org}) to ease user navigation} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Reconstructed the website by incorporating CSS in style designing and PHP in scripting} \\ \\
+
+Sept 2009 - Dec 2010 &\textbf{Gateway Science Workshop}\\
+& \textit{Facilitator (Engineering Analysis)} \\
+ & \multicolumn{1}{p{0.8\textwidth}}{- Facilitated weekly two-hour group study workshops for engineering freshmen enrolled in Engineering Analysis (MATLAB, Linear Algebra, Mechanics, Ordinary Differential Equations)} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Engaged students in group discussions to encourage critical thinking on engineering concepts and applications} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Monitored students' progress and made changes to the workshop accordingly} \\ \\
+
+Sept 2008 - Jun 2009 &\textbf{Northwestern University Solar Car Team} (NUsolar)\\
+& \textit{Electrical Team Member \& Business Team Member} \\
+ & \multicolumn{1}{p{0.8\textwidth}}{- Worked on a solar powered car that won 3rd place in the Formula Sun Gran Prix 2009} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Designed and built circuitry for the solar car's new electrical system} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Researched sponsorship opportunities for the solar car project}
+
+\end{tabular*}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Community Service}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l}
+Dec 2008 - Present &\textbf{Alternative Student Breaks}\\
+ & \multicolumn{1}{p{0.8\textwidth}}{- Participated in a week-long service learning trip during school breaks} \\
+&\multicolumn{1}{p{0.8\textwidth}}{- Volunteered at children hospital, national parks, and various local non-profit organizations in the United States} \\\\
+
+Oct 2013 - Present &\textbf{Caltech RISE Program}\\
+ & \multicolumn{1}{p{0.8\textwidth}}{- Assisted high school students who are weak in mathematics and sciences to learn the subjects} \\ \\
+ 
+\end{tabular*}
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Language Skill}
+
+English (Fluent), Mandarin (Fluent), Cantonese (Native), Malay (Fluent), Japanese (Basic)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Computer Skill}
+
+\textbf{Advanced:} Mathematica, MATLAB \\
+\textbf{Intermediate:} Python, Javascript, HTML, CSS \\
+\textbf{Basic:} Simulink, C/C++, Bash, NX (Unigraphics), ANSYS 
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+  \vspace{20px}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
